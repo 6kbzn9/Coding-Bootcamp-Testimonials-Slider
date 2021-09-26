@@ -5,7 +5,72 @@
           box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  color: #202046;
+}
+
+.wrapper {
+  padding: 2.5rem 0;
+  background: url("../images/pattern-curve.svg") bottom left no-repeat;
+  background-size: 65%;
+}
+
+.slider {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slider__girl, .slider__boy {
+  width: 100%;
+}
+
+.slider__image {
+  padding: 3rem 0;
+  background: url("../images/pattern-bg.svg") center center no-repeat;
+  background-size: contain;
+  margin-bottom: 3rem;
+}
+
+.slider__image img {
+  display: block;
+  width: 78%;
+  margin: auto;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 10px 50px rgba(32, 32, 70, 0.1);
+          box-shadow: 0 10px 50px rgba(32, 32, 70, 0.1);
+}
+
+.slider__body {
+  text-align: center;
+  padding: 2.25rem 0;
+  background: url("../images/pattern-quotes.svg") top center no-repeat;
+  background-size: 6rem;
+}
+
+.slider__quote {
+  font-size: 1.825rem;
+  font-weight: 300;
+  color: #282858;
+  display: block;
+  line-height: 1.4;
+  margin-bottom: 1.75rem;
+}
+
+.slider__name {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.slider__name span {
+  display: block;
+  color: #babacf;
+  margin-top: 0.25rem;
 }
 /*# sourceMappingURL=style.css.map */

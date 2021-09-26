@@ -6,6 +6,69 @@ $GrayishBlue: hsl(240, 18%, 77%);
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  font-size: 62.5%;
+}
 body {
   font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  color: $DarkBlue;
+}
+
+.wrapper {
+  padding: 2.5rem 0;
+  background: url("../images/pattern-curve.svg") bottom left no-repeat;
+  background-size: 65%;
+}
+
+.slider {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+
+  &__girl,
+  &__boy {
+    width: 100%;
+  }
+
+  &__image {
+    padding: 3rem 0;
+    background: url("../images/pattern-bg.svg") center center no-repeat;
+    background-size: contain;
+    margin-bottom: 3rem;
+
+    img {
+      display: block;
+      width: 78%;
+      margin: auto;
+      border-radius: 0.5rem;
+      box-shadow: 0 10px 50px rgba($DarkBlue, 0.1);
+    }
+  }
+  &__body {
+    text-align: center;
+    padding: 2.25rem 0;
+    background: url("../images/pattern-quotes.svg") top center no-repeat;
+    background-size: 6rem;
+  }
+  &__quote {
+    font-size: 1.825rem;
+    font-weight: 300;
+    color: lighten($DarkBlue, 5%);
+    display: block;
+    line-height: 1.4;
+    margin-bottom: 1.75rem;
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    span {
+      display: block;
+      color: $GrayishBlue;
+      margin-top: 0.25rem;
+    }
+  }
 }
