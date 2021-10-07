@@ -21,11 +21,34 @@ body {
   background-size: 65%;
 }
 
+@media (min-width: 800px) {
+  .wrapper {
+    background-size: 45%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+  }
+}
+
 .slider {
   width: 90%;
   margin: 0 auto;
+  max-width: 400px;
   position: relative;
-  max-width: 450px;
+}
+
+@media (min-width: 800px) {
+  .slider {
+    max-width: 1200px;
+  }
 }
 
 .slider__person {
@@ -37,6 +60,19 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (min-width: 800px) {
+  .slider__person {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 100%;
+  }
 }
 
 .slider__image {
@@ -56,11 +92,32 @@ body {
           box-shadow: 0 10px 50px rgba(32, 32, 70, 0.1);
 }
 
+@media (min-width: 950px) {
+  .slider__image img {
+    width: 73%;
+  }
+}
+
 .slider__body {
   text-align: center;
   padding: 2.25rem 0;
   background: url("../images/pattern-quotes.svg") top center no-repeat;
   background-size: 6rem;
+}
+
+@media (min-width: 800px) {
+  .slider__body {
+    text-align: left;
+    -webkit-transform: translateX(20%);
+            transform: translateX(20%);
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 800px) {
+  .slider__image, .slider__body {
+    width: 50%;
+  }
 }
 
 .slider__quote {
@@ -72,6 +129,18 @@ body {
   margin-bottom: 1.75rem;
 }
 
+@media (min-width: 800px) {
+  .slider__quote {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 950px) {
+  .slider__quote {
+    font-size: 2.5rem;
+  }
+}
+
 .slider__name {
   font-size: 1.5rem;
   font-weight: 700;
@@ -81,6 +150,12 @@ body {
   display: block;
   color: #babacf;
   margin-top: 0.25rem;
+}
+
+@media (min-width: 800px) {
+  .slider__name span {
+    display: inline;
+  }
 }
 
 .slider__button {
@@ -96,6 +171,12 @@ body {
   width: 80px;
   border-radius: 2rem;
   overflow: hidden;
+}
+
+@media (min-width: 800px) {
+  .slider__button {
+    left: 30%;
+  }
 }
 
 .slider__prev, .slider__next {

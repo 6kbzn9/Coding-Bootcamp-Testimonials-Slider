@@ -6,6 +6,11 @@ $GrayishBlue: hsl(240, 18%, 77%);
   padding: 0;
   box-sizing: border-box;
 }
+@mixin bigger($var) {
+  @media (min-width: $var) {
+    @content;
+  }
+}
 
 html {
   font-size: 62.5%;
@@ -20,18 +25,36 @@ body {
   padding: 2.5rem 0;
   background: url("../images/pattern-curve.svg") bottom left no-repeat;
   background-size: 65%;
+
+  @include bigger(800px) {
+    background-size: 45%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
 }
 
 .slider {
   width: 90%;
   margin: 0 auto;
+  max-width: 400px;
   position: relative;
-  max-width: 450px;
+
+  @include bigger(800px) {
+    max-width: 1200px;
+  }
 
   &__person {
     width: 100%;
     display: flex;
     flex-direction: column;
+    @include bigger(800px) {
+      flex-direction: row-reverse;
+      align-items: center;
+      max-width: 100%;
+    }
   }
 
   &__image {
@@ -47,6 +70,9 @@ body {
       margin: auto;
       border-radius: 0.5rem;
       box-shadow: 0 10px 50px rgba($DarkBlue, 0.1);
+      @include bigger(950px) {
+        width: 73%;
+      }
     }
   }
   &__body {
@@ -54,6 +80,18 @@ body {
     padding: 2.25rem 0;
     background: url("../images/pattern-quotes.svg") top center no-repeat;
     background-size: 6rem;
+    @include bigger(800px) {
+      text-align: left;
+      transform: translateX(20%);
+      max-width: 600px;
+    }
+  }
+
+  &__image,
+  &__body {
+    @include bigger(800px) {
+      width: 50%;
+    }
   }
   &__quote {
     font-size: 1.825rem;
@@ -62,6 +100,13 @@ body {
     display: block;
     line-height: 1.4;
     margin-bottom: 1.75rem;
+
+    @include bigger(800px) {
+      font-size: 2.25rem;
+    }
+    @include bigger(950px) {
+      font-size: 2.5rem;
+    }
   }
 
   &__name {
@@ -72,6 +117,10 @@ body {
       display: block;
       color: $GrayishBlue;
       margin-top: 0.25rem;
+
+      @include bigger(800px) {
+        display: inline;
+      }
     }
   }
 
@@ -85,6 +134,9 @@ body {
     width: 80px;
     border-radius: 2rem;
     overflow: hidden;
+    @include bigger(800px) {
+      left: 30%;
+    }
   }
   &__prev,
   &__next {
