@@ -29,6 +29,7 @@ body {
 
 .slider__girl, .slider__boy {
   width: 100%;
+  position: absolute;
 }
 
 .slider__image {
