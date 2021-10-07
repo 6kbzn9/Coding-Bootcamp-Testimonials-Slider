@@ -25,14 +25,22 @@ body {
   width: 90%;
   margin: 0 auto;
   position: relative;
+  max-width: 450px;
 }
 
-.slider__girl, .slider__boy {
+.slider__person {
   width: 100%;
-  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .slider__image {
+  position: relative;
   padding: 3rem 0;
   background: url("../images/pattern-bg.svg") center center no-repeat;
   background-size: contain;
@@ -73,5 +81,44 @@ body {
   display: block;
   color: #babacf;
   margin-top: 0.25rem;
+}
+
+.slider__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -30%);
+          transform: translate(-50%, -30%);
+  height: 40px;
+  width: 80px;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.slider__prev, .slider__next {
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 25%;
+  cursor: pointer;
+}
+
+.slider__prev:hover, .slider__next:hover {
+  background-color: #e6e6e6;
+}
+
+.slider__prev {
+  background-image: url("../images/icon-prev.svg");
+}
+
+.slider__next {
+  background-image: url("../images/icon-next.svg");
 }
 /*# sourceMappingURL=style.css.map */

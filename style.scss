@@ -26,14 +26,16 @@ body {
   width: 90%;
   margin: 0 auto;
   position: relative;
+  max-width: 450px;
 
-  &__girl,
-  &__boy {
+  &__person {
     width: 100%;
-    position: absolute;
+    display: flex;
+    flex-direction: column;
   }
 
   &__image {
+    position: relative;
     padding: 3rem 0;
     background: url("../images/pattern-bg.svg") center center no-repeat;
     background-size: contain;
@@ -71,5 +73,36 @@ body {
       color: $GrayishBlue;
       margin-top: 0.25rem;
     }
+  }
+
+  &__button {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    height: 40px;
+    width: 80px;
+    border-radius: 2rem;
+    overflow: hidden;
+  }
+  &__prev,
+  &__next {
+    height: 100%;
+    flex: 1;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 25%;
+    cursor: pointer;
+    &:hover {
+      background-color: darken(#fff, 10%);
+    }
+  }
+  &__prev {
+    background-image: url("../images/icon-prev.svg");
+  }
+  &__next {
+    background-image: url("../images/icon-next.svg");
   }
 }
