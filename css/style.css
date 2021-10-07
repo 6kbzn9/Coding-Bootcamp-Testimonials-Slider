@@ -83,6 +83,13 @@ body {
   margin-bottom: 3rem;
 }
 
+@media (min-width: 800px) {
+  .slider__image {
+    margin-bottom: 0;
+    padding: 4rem 0;
+  }
+}
+
 .slider__image img {
   display: block;
   width: 78%;
@@ -94,7 +101,7 @@ body {
 
 @media (min-width: 950px) {
   .slider__image img {
-    width: 73%;
+    width: 70%;
   }
 }
 
